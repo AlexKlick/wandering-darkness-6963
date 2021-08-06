@@ -1,8 +1,15 @@
 <% @plots.each do |plot| %>
   <%= plot.number %>
-  <div id="plot<%= plot.id %>">
-    <% plot.plants.each do |plant| %>
-        <%= plant.name %>
+  <table id="plot<%= plot.id %>">
+    <% plot.plot_plants.each do |plot_plant| %>
+      <tr>
+        <td>
+          <%= plot_plant.plant.name %>
+        </td>
+        <td>
+          <%=link_to "delete #{plot_plant.plant.name}", plot_plant, method: "delete" %>
+        </td>
+      </tr>
     <% end %>
-  </div>
+  </table>
 <% end %>
