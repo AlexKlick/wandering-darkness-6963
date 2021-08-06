@@ -26,12 +26,15 @@ RSpec.describe Garden do
       #plant2 shows up 3 times, plant1 shows up twice, all others show up once
     end
     describe 'plants_less_100_days' do
-      it 'returns the unique plants from a garden that require less than 100 days to harvest' do
-        expect(@garden.plants_less_100_days[0].name).to eq(@plant1.name)
-        expect(@garden.plants_less_100_days[1].name).to eq(@plant2.name)
+      it 'returns the unique plants from a garden that require less than 100 days to harvest, sorted by most seen plant' do
+        binding.pry
+        expect(@garden.plants_less_100_days[0].name).to eq(@plant2.name)
+        expect(@garden.plants_less_100_days[1].name).to eq(@plant1.name)
         expect(@garden.plants_less_100_days[2].name).to eq(@plant4.name)
       end
     end
+
+
   end
 end
 
