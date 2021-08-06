@@ -27,7 +27,9 @@ RSpec.describe Garden do
     end
     describe 'plants_less_100_days' do
       it 'returns the unique plants from a garden that require less than 100 days to harvest' do
-        expect(@garden.plants_less_100_days).to eq([@plant1. @plant2, @plant4])
+        expect(@garden.plants_less_100_days[0].name).to eq(@plant1.name)
+        expect(@garden.plants_less_100_days[1].name).to eq(@plant2.name)
+        expect(@garden.plants_less_100_days[2].name).to eq(@plant4.name)
       end
     end
   end
