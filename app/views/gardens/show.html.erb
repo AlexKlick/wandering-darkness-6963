@@ -1,1 +1,4 @@
 <%= @garden.name %>
+<% @garden.plants_less_100_days.each do |plant| %>
+  <%= plant.name %>
+<% end %>
