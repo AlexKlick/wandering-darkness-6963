@@ -25,17 +25,17 @@ RSpec.describe 'Plot Index' do
 
     expect(page).to have_content(@plot1.number)
     expect(page).to have_content(@plot2.number)
-
+    
     within("#plot#{@plot1.id}") do
-      expect(page).to have_content(@plant_plots1.name)
-      expect(page).to have_content(@plant_plots2.name)
-      expect(page).to have_content(@plant_plots3.name)
-      expect(page).to have_content(@plant_plots4.name)
+      expect(page).to have_content(@plant1.name)
+      expect(page).to have_content(@plant2.name)
+      expect(page).to have_content(@plant3.name)
+      expect(page).to have_content(@plant4.name)
     end
 
     within("#plot#{@plot2.id}") do
-      expect(page).to have_content(@plant_plots5.name)
-      expect(page).to have_content(@plant_plots6.name)
+      expect(page).to have_content(@plant1.name)
+      expect(page).to have_content(@plant2.name)
     end
   end
 end

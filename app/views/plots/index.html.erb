@@ -1,0 +1,8 @@
+<% @plots.each do |plot| %>
+  <%= plot.number %>
+  <div id="plot<%= plot.id %>">
+    <% plot.plants.each do |plant| %>
+        <%= plant.name %>
+    <% end %>
+  </div>
+<% end %>
